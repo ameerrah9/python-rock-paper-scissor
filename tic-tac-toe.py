@@ -37,7 +37,13 @@ def get_result(user_pick, computer_pick):
 
 # outside of the function
 computer_pick = get_computers_choice()
-users_pick = get_user_input()
+
+# get input until user enters 'rock', 'paper' or scissors
+while True:
+    users_pick = get_user_input()
+    if users_pick in ['rock', 'paper', 'scissors']:
+        break
+
 result = get_result(users_pick, computer_pick)
 
 # printing result
